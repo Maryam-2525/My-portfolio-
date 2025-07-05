@@ -1,31 +1,409 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    color: #333;
+/* Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfaf6;
+    color: #3a2f28;
+    line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+    background-color: #f8eee9;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.brand-name {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #6b4226;
+}
+
+/* Navigation */
+.main-nav {
+    margin-top: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     padding: 0;
 }
 
-header {
-    background-color: #f8f0e8;
-    padding: 20px;
-    text-align: center;
+.nav-link {
+    text-decoration: none;
+    color: #5a3e36;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
+.nav-link:hover {
+    color: #a76e4d;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 30px;
+    background-color: #fffdfb;
+}
+
+.hero-text {
+    flex: 1 1 300px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.welcome-message {
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: #5a3e36;
 }
 
-main {
-    padding: 20px;
+.intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #4e3b31;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #a76e4d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #8b563a;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1 1 300px;
     text-align: center;
 }
 
-footer {
-    background-color: #f8f0e8;
-    padding: 10px;
+.main-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+    background-color: #f8eee9;
     text-align: center;
-    font-size: 14px;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    color: #6b4226;
+}
+
+/* ======================
+   ✅ Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .brand-name {
+        font-size: 1.8rem;
+    }
+
+    .welcome-message {
+        font-size: 1.6rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* About Page */
+.about-main {
+    padding: 40px 20px;
+    background-color: #fffdfb;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: #5a3e36;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-paragraph {
+    font-size: 1.1rem;
+    color: #4e3b31;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.about-image-container {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.about-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive: About Section */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column-reverse;
+        padding: 20px 10px;
+    }
+
+    .about-title {
+        font-size: 1.6rem;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
+/* Portfolio Page */
+.portfolio-main {
+  padding: 40px 20px;
+  background-color: #fffdfb;
+}
+
+.portfolio-section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  color: #5a3e36;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+/* Product Gallery */
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  color: #6b4226;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-size: 1rem;
+  color: #4e3b31;
+}
+
+/* Tech Notes */
+.tech-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.note-card {
+  background-color: #f6f1ec;
+  border-left: 5px solid #a76e4d;
+  padding: 20px;
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.note-title {
+  font-size: 1.2rem;
+  color: #5a3e36;
+  margin-bottom: 10px;
+}
+
+.note-desc {
+  font-size: 1rem;
+  color: #3a2f28;
+}
+
+/* Responsive Design for Portfolio */
+@media (max-width: 768px) {
+  .product-card,
+  .note-card {
+    max-width: 100%;
+  }
+
+  .portfolio-title {
+    font-size: 1.6rem;
+  }
+
+  .product-desc,
+  .note-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Contact Page */
+.contact-main {
+  padding: 40px 20px;
+  background-color: #fffdfb;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 1.8rem;
+  color: #5a3e36;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #4e3b31;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #a76e4d;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #8b563a;
+}
+
+.contact-form-section {
+  background-color: #f8eee9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-top: 15px;
+  color: #4e3b31;
+}
+
+.form-input,
+.form-textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  resize: vertical;
+}
+
+.form-response {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Contact Form */
+@media (max-width: 600px) {
+  .social-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-title {
+    font-size: 1.4rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 1rem;
+  }
 }
